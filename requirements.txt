@@ -1,0 +1,4 @@
+python-telegram-bot>=20.0
+telethon==1.28.5
+pymongo==4.4.1
+python-dotenv==1.0.0

@@ -6,3 +6,7 @@ venv/
 
 # Ignore logs directory
 logs/
+
+scraping_session.*
+__pycache__/
+*.pyc

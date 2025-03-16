@@ -1,0 +1,190 @@
+2025-03-16 17:21:20,269 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:21:20,269 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-03-16 17:21:21,908 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-03-16 17:22:40,844 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:22:40,844 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-03-16 17:22:40,952 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-03-16 17:22:52,398 - telethon.client.users - INFO - Phone migrated to 4
+2025-03-16 17:22:52,555 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-03-16 17:22:52,744 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-03-16 17:22:52,746 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-03-16 17:22:52,747 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-03-16 17:22:57,295 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-03-16 17:24:02,770 - telethon.client.updates - INFO - Got difference for channel 1268085464 updates
+2025-03-16 17:24:10,145 - telethon.client.updates - INFO - Got difference for channel 1268085464 updates
+2025-03-16 17:24:40,555 - telethon.client.updates - INFO - Got difference for channel 1268085464 updates
+2025-03-16 17:25:27,053 - telethon.client.updates - INFO - Got difference for channel 1268085464 updates
+2025-03-16 17:25:35,660 - telethon.client.updates - INFO - Got difference for channel 1268085464 updates
+2025-03-16 17:25:59,011 - telethon.client.updates - INFO - Got difference for channel 1268085464 updates
+2025-03-16 17:26:29,444 - telethon.client.updates - INFO - Got difference for channel 1268085464 updates
+2025-03-16 17:26:34,938 - telethon.client.updates - INFO - Got difference for channel 1268085464 updates
+2025-03-16 17:26:36,105 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-03-16 17:26:36,105 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
+2025-03-16 17:26:44,150 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:26:48,662 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getMe "HTTP/1.1 200 OK"
+2025-03-16 17:26:48,664 - telegram.ext.Application - INFO - Application started
+2025-03-16 17:26:48,667 - __main__ - ERROR - Error in main process: Cannot close a running event loop
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1042, in __run
+    loop.run_until_complete(self._bootstrap_initialize(max_retries=bootstrap_retries))
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 663, in run_until_complete
+    self._check_running()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 622, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1063, in __run
+    loop.run_until_complete(self.stop())
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 663, in run_until_complete
+    self._check_running()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 622, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 39, in main
+    await application.run_polling(allowed_updates=Update.ALL_TYPES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 832, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1072, in __run
+    loop.close()
+  File "/usr/lib/python3.12/asyncio/unix_events.py", line 68, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 101, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-03-16 17:26:48,690 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-16 17:26:48,691 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-03-16 17:26:48,693 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-16 17:26:57,365 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:26:58,345 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getMe "HTTP/1.1 200 OK"
+2025-03-16 17:26:58,346 - telegram.ext.Application - INFO - Application started
+2025-03-16 17:26:58,348 - __main__ - ERROR - Error in main process: Cannot close a running event loop
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1042, in __run
+    loop.run_until_complete(self._bootstrap_initialize(max_retries=bootstrap_retries))
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 663, in run_until_complete
+    self._check_running()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 622, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1063, in __run
+    loop.run_until_complete(self.stop())
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 663, in run_until_complete
+    self._check_running()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 622, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 39, in main
+    await application.run_polling(allowed_updates=Update.ALL_TYPES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 832, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1072, in __run
+    loop.close()
+  File "/usr/lib/python3.12/asyncio/unix_events.py", line 68, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 101, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-03-16 17:26:58,355 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-16 17:26:58,355 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-03-16 17:26:58,357 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-16 17:27:50,028 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:27:55,200 - __main__ - ERROR - Error in main process: database is locked
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 37, in main
+    telegram_client = await scrapper_main(loop)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/bot/telegram_scrapper.py", line 168, in main
+    client = TelegramClient('scraping_session', api_id, api_hash, loop=loop)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telethon/client/telegrambaseclient.py", line 308, in __init__
+    session.set_dc(
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telethon/sessions/sqlite.py", line 168, in set_dc
+    self._update_session_table()
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telethon/sessions/sqlite.py", line 194, in _update_session_table
+    c.execute('delete from sessions')
+sqlite3.OperationalError: database is locked
+2025-03-16 17:29:05,816 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:29:07,837 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
+2025-03-16 17:32:35,191 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:32:37,558 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
+2025-03-16 17:35:46,886 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:35:49,345 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
+2025-03-16 17:36:57,251 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:36:59,759 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
+2025-03-16 17:41:00,635 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:41:02,897 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
+2025-03-16 17:41:16,923 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:41:19,152 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
+2025-03-16 17:44:32,768 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:44:35,183 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
+2025-03-16 17:45:52,166 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:45:54,260 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
+2025-03-16 17:46:10,720 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:46:12,795 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
+2025-03-16 17:48:08,916 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:48:16,138 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
+2025-03-16 17:48:33,074 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 17:48:35,362 - __main__ - ERROR - Error in main process: Failed to connect to MongoDB
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
+    raise RuntimeError("Failed to connect to MongoDB")
+RuntimeError: Failed to connect to MongoDB
