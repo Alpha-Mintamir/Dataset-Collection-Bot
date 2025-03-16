@@ -188,3 +188,422 @@ Traceback (most recent call last):
   File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in main
     raise RuntimeError("Failed to connect to MongoDB")
 RuntimeError: Failed to connect to MongoDB
+2025-03-16 18:30:04,983 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 18:30:08,727 - __main__ - ERROR - Error in main process: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 35, in main
+    if not messages_collection or not metadata_collection:
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/pymongo/collection.py", line 381, in __bool__
+    raise NotImplementedError(
+NotImplementedError: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-16 18:30:58,243 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 18:31:03,267 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getMe "HTTP/1.1 200 OK"
+2025-03-16 18:31:03,269 - telegram.ext.Application - INFO - Application started
+2025-03-16 18:31:03,269 - __main__ - ERROR - Error in main process: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 44, in main
+    telegram_client = await scrapper_main(loop)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/bot/telegram_scrapper.py", line 203, in main
+    if not messages_collection or not metadata_collection:
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/pymongo/collection.py", line 381, in __bool__
+    raise NotImplementedError(
+NotImplementedError: Collection objects do not implement truth value testing or bool(). Please compare with None instead: collection is not None
+2025-03-16 18:31:03,272 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-16 18:31:03,273 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-16 18:31:37,685 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 18:31:41,857 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getMe "HTTP/1.1 200 OK"
+2025-03-16 18:31:41,859 - telegram.ext.Application - INFO - Application started
+2025-03-16 18:31:41,966 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-03-16 18:31:44,131 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:31:44,935 - telethon.client.users - INFO - Phone migrated to 4
+2025-03-16 18:31:45,129 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-03-16 18:31:45,332 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-03-16 18:31:45,334 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:31:45,334 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-03-16 18:31:50,169 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-03-16 18:32:03,179 - __main__ - INFO - Bot is ready to receive commands!
+2025-03-16 18:32:03,181 - __main__ - ERROR - Error in main process: Cannot close a running event loop
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1042, in __run
+    loop.run_until_complete(self._bootstrap_initialize(max_retries=bootstrap_retries))
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 663, in run_until_complete
+    self._check_running()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 622, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1063, in __run
+    loop.run_until_complete(self.stop())
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 663, in run_until_complete
+    self._check_running()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 622, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 48, in main
+    await application.run_polling(allowed_updates=Update.ALL_TYPES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 832, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1072, in __run
+    loop.close()
+  File "/usr/lib/python3.12/asyncio/unix_events.py", line 68, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 101, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-03-16 18:32:03,186 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-03-16 18:32:03,187 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
+2025-03-16 18:32:03,207 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-16 18:32:03,207 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-16 18:32:59,071 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 18:33:01,815 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-03-16 18:33:04,966 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:33:06,633 - telethon.client.users - INFO - Phone migrated to 4
+2025-03-16 18:33:06,945 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-03-16 18:33:07,276 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-03-16 18:33:07,277 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:33:07,278 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-03-16 18:33:10,235 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-03-16 18:38:51,700 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 18:38:55,396 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-03-16 18:38:57,833 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:39:00,439 - telethon.client.users - INFO - Phone migrated to 4
+2025-03-16 18:39:00,764 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-03-16 18:39:01,203 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-03-16 18:39:01,204 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:39:01,205 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-03-16 18:39:03,384 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-03-16 18:39:15,443 - __main__ - INFO - Bot is ready to receive commands!
+2025-03-16 18:39:15,444 - __main__ - ERROR - Error in main process: Cannot close a running event loop
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1042, in __run
+    loop.run_until_complete(self._bootstrap_initialize(max_retries=bootstrap_retries))
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 663, in run_until_complete
+    self._check_running()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 622, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1067, in __run
+    loop.run_until_complete(self.shutdown())
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 663, in run_until_complete
+    self._check_running()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 622, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 46, in main
+    await application.run_polling(allowed_updates=Update.ALL_TYPES, drop_pending_updates=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 832, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1072, in __run
+    loop.close()
+  File "/usr/lib/python3.12/asyncio/unix_events.py", line 68, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 101, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-03-16 18:39:15,447 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-03-16 18:39:15,448 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
+2025-03-16 18:39:15,467 - __main__ - ERROR - Error stopping application: This Application is not running!
+2025-03-16 18:40:06,468 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 18:40:09,865 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-03-16 18:40:13,768 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:40:15,224 - telethon.client.users - INFO - Phone migrated to 4
+2025-03-16 18:40:15,829 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-03-16 18:40:16,000 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-03-16 18:40:16,003 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:40:16,003 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-03-16 18:40:17,586 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-03-16 18:40:26,628 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getMe "HTTP/1.1 200 OK"
+2025-03-16 18:40:26,630 - telegram.ext.Application - INFO - Application started
+2025-03-16 18:40:26,630 - __main__ - INFO - Bot is ready to receive commands!
+2025-03-16 18:40:26,810 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-16 18:40:39,509 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:40:47,990 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:40:47,991 - bot.bot_handler - INFO - User 6927234281 started the bot
+2025-03-16 18:40:48,795 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:40:58,274 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:41:07,076 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:41:07,475 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:41:14,745 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:41:15,110 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:41:17,408 - telethon.client.updates - INFO - Got difference for channel 1268085464 updates
+2025-03-16 18:41:20,257 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:41:21,145 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:41:30,408 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:41:41,140 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:41:51,878 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:41:56,028 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:41:56,670 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:41:57,135 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/editMessageText "HTTP/1.1 200 OK"
+2025-03-16 18:42:06,176 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:42:14,676 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:42:25,512 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:42:33,864 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:42:34,846 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:42:39,016 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:42:39,352 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:42:40,115 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/editMessageText "HTTP/1.1 200 OK"
+2025-03-16 18:42:49,193 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:42:59,343 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:43:09,971 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:43:20,134 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:43:30,288 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:43:40,525 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:43:50,677 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:44:00,849 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:44:11,016 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:44:21,224 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:44:31,389 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:44:42,360 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:44:52,614 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:44:58,146 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-16 18:44:58,146 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-16 18:44:58,146 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-03-16 18:44:58,147 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
+2025-03-16 18:45:02,993 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 18:45:02,993 - bot.telegram_scrapper - INFO - Connecting to MongoDB...
+2025-03-16 18:45:05,516 - bot.telegram_scrapper - INFO - Successfully connected to MongoDB
+2025-03-16 18:45:05,516 - __main__ - ERROR - Error in main process: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in run_bot_and_scraper
+    messages_collection, metadata_collection = setup_mongodb()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2025-03-16 18:45:25,725 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 18:45:25,726 - bot.telegram_scrapper - INFO - Connecting to MongoDB...
+2025-03-16 18:45:28,974 - bot.telegram_scrapper - INFO - Successfully connected to MongoDB
+2025-03-16 18:45:28,974 - __main__ - ERROR - Error in main process: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/main.py", line 36, in run_bot_and_scraper
+    messages_collection, metadata_collection = setup_mongodb()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2025-03-16 18:46:21,030 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 18:46:21,030 - bot.telegram_scrapper - INFO - Connecting to MongoDB...
+2025-03-16 18:46:23,825 - bot.telegram_scrapper - INFO - Successfully connected to MongoDB
+2025-03-16 18:46:23,918 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-03-16 18:46:27,934 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:46:29,629 - telethon.client.users - INFO - Phone migrated to 4
+2025-03-16 18:46:29,954 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-03-16 18:46:30,249 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-03-16 18:46:30,251 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:46:30,252 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-03-16 18:46:31,677 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-03-16 18:46:47,495 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getMe "HTTP/1.1 200 OK"
+2025-03-16 18:46:47,496 - telegram.ext.Application - INFO - Application started
+2025-03-16 18:46:47,497 - __main__ - INFO - Bot is ready to receive commands!
+2025-03-16 18:46:47,783 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-16 18:46:55,587 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:46:56,356 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:47:05,366 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:47:07,112 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:47:07,952 - bot.telegram_scrapper - ERROR - Error starting channel scraping: object UpdateResult can't be used in 'await' expression
+2025-03-16 18:47:08,270 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/editMessageText "HTTP/1.1 200 OK"
+2025-03-16 18:47:15,494 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:47:25,674 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:47:35,917 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:47:46,039 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:47:56,173 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:48:06,292 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:48:08,082 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-16 18:48:08,083 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-16 18:48:08,084 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-03-16 18:48:08,085 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
+2025-03-16 18:48:13,661 - __main__ - INFO - Starting Telegram data collection bot...
+2025-03-16 18:48:13,661 - bot.telegram_scrapper - INFO - Connecting to MongoDB...
+2025-03-16 18:48:16,368 - bot.telegram_scrapper - INFO - Successfully connected to MongoDB
+2025-03-16 18:48:16,462 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-03-16 18:48:18,551 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:48:20,405 - telethon.client.users - INFO - Phone migrated to 4
+2025-03-16 18:48:20,707 - telethon.client.telegrambaseclient - INFO - Reconnecting to new data center 4
+2025-03-16 18:48:21,098 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-03-16 18:48:21,100 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-03-16 18:48:21,100 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.92:443/TcpFull...
+2025-03-16 18:48:23,338 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.92:443/TcpFull complete!
+2025-03-16 18:48:33,300 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getMe "HTTP/1.1 200 OK"
+2025-03-16 18:48:33,302 - telegram.ext.Application - INFO - Application started
+2025-03-16 18:48:33,303 - __main__ - INFO - Bot is ready to receive commands!
+2025-03-16 18:48:33,421 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/deleteWebhook "HTTP/1.1 200 OK"
+2025-03-16 18:48:39,183 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:48:40,068 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:48:47,621 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:48:48,058 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:48:49,883 - bot.telegram_scrapper - INFO - Extracted 3 historical messages from @alphityyyy
+2025-03-16 18:48:49,883 - bot.telegram_scrapper - INFO - Successfully started scraping @alphityyyy
+2025-03-16 18:48:50,028 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/editMessageText "HTTP/1.1 200 OK"
+2025-03-16 18:48:57,932 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:49:08,201 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:49:18,488 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:49:29,065 - bot.telegram_scrapper - INFO - New message received from @alphityyyy: 5
+2025-03-16 18:49:29,067 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:49:39,347 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:49:49,644 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:49:59,916 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:50:02,376 - bot.telegram_scrapper - INFO - New message received from @alphityyyy: 6
+2025-03-16 18:50:10,208 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:50:20,479 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:50:23,035 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:50:24,608 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:50:32,298 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:50:33,154 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:50:43,056 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:50:53,443 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:51:03,713 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:51:14,010 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:51:24,333 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:51:34,723 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:51:45,037 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:51:55,315 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:52:05,600 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:52:15,871 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:52:26,183 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:52:36,472 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:52:46,754 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:52:48,682 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:52:50,150 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:52:59,003 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:53:02,093 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:53:03,089 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:53:04,486 - bot.telegram_scrapper - INFO - Extracted 2 historical messages from @checkkdyd
+2025-03-16 18:53:04,486 - bot.telegram_scrapper - INFO - Successfully started scraping @checkkdyd
+2025-03-16 18:53:04,876 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/editMessageText "HTTP/1.1 200 OK"
+2025-03-16 18:53:12,226 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:53:19,421 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 277, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1298, in process_update
+    await coroutine
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_handlers/basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/src/bot/bot_handler.py", line 154, in stats_command
+    await update.message.reply_text(message)
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/_message.py", line 1775, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 2977, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/_bot.py", line 1091, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 618, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/_bot.py", line 803, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/_bot.py", line 691, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 362, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/_bot.py", line 720, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alpha-lencho/Projects/Dataset_Collector_bot/venv/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 294, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-03-16 18:53:23,500 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:53:33,770 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:53:38,512 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:53:40,633 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:53:47,109 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:53:49,122 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:53:58,585 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:54:02,472 - bot.telegram_scrapper - INFO - New message received from @checkkdyd: 4
+2025-03-16 18:54:04,185 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:54:06,177 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/sendMessage "HTTP/1.1 200 OK"
+2025-03-16 18:54:15,451 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:54:25,800 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:54:36,172 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:54:46,517 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7790230839:AAGiMrEqKZimn-FzbFMrlQ1K4ia1oNFUeyQ/getUpdates "HTTP/1.1 200 OK"
+2025-03-16 18:54:54,060 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-16 18:54:54,061 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-16 18:54:54,062 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.92:443/TcpFull...
+2025-03-16 18:54:54,064 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.92:443/TcpFull complete!
